@@ -13,17 +13,11 @@
 </p>
 
 Additional documentation can be found at the [Marlin Home Page](//marlinfw.org/).
-Please test this firmware and let us know if it misbehaves in any way. Volunteers are standing by!
+
 
 ## Marlin 2.1
 
-Marlin 2.1 continues to support both 32-bit ARM and 8-bit AVR boards while adding support for up to 9 coordinated axes and to up to 8 extruders.
-
-Download earlier versions of Marlin on the [Releases page](//github.com/MarlinFirmware/Marlin/releases).
-
-## Example Configurations
-
-Before you can build Marlin for your machine you'll need a configuration for your specific hardware. Upon request, your vendor will be happy to provide you with the complete source code and configurations for your machine, but you'll need to get updated configuration files if you want to install a newer version of Marlin. Fortunately, Marlin users have contributed dozens of tested configurations to get you started. Visit the [MarlinFirmware/Configurations](//github.com/MarlinFirmware/Configurations) repository to find the right configuration for your hardware.
+The Anycubic Mega Zero 2.0 is a very old machine, but it is still supported by Marlin and it's great supporters. Projects like KADs https://github.com/kad/Marlin?tab=readme-ov-file show that old hardware can still benefit from new software. This fork hosts the branch 2.1.2.5 because it allows the printer to use new features like Linear Advance, Frequency Limit and Host Action Commands, whereas I couldn't activate all those features with newer versions. It's an old machine, and you're probably better off running Klipper. 
 
 ## Building Marlin 2.1
 
@@ -82,59 +76,11 @@ The Issue Queue is reserved for Bug Reports and Feature Requests. Please use the
 - Facebook Group ["Marlin Firmware for 3D Printers"](//www.facebook.com/groups/3Dtechtalk/)
 - [Marlin Configuration](//www.youtube.com/results?search_query=marlin+configuration) on YouTube
 
-## Contributing Patches
-
-You can contribute patches by submitting a Pull Request to the ([bugfix-2.1.x](//github.com/MarlinFirmware/Marlin/tree/bugfix-2.1.x)) branch.
-
-- We use branches named with a "bugfix" or "dev" prefix to fix bugs and integrate new features.
-- Follow the [Coding Standards](//marlinfw.org/docs/development/coding_standards.html) to gain points with the maintainers.
-- Please submit Feature Requests and Bug Reports to the [Issue Queue](//github.com/MarlinFirmware/Marlin/issues/new/choose). See above for user support.
-- Whenever you add new features, be sure to add one or more build tests to `buildroot/tests`. Any tests added to a PR will be run within that PR on GitHub servers as soon as they are pushed. To minimize iteration be sure to run your new tests locally, if possible.
-  - Local build tests:
-    - All: `make tests-config-all-local`
-    - Single: `make tests-config-single-local TEST_TARGET=...`
-  - Local build tests in Docker:
-    - All: `make tests-config-all-local-docker`
-    - Single: `make tests-config-all-local-docker TEST_TARGET=...`
-  - To run all unit test suites:
-    - Using PIO: `platformio run -t test-marlin`
-    - Using Make: `make unit-test-all-local`
-    - Using Docker + make: `maker unit-test-all-local-docker`
-  - To run a single unit test suite:
-    - Using PIO: `platformio run -t marlin_<test-suite-name>`
-    - Using make: `make unit-test-single-local TEST_TARGET=<test-suite-name>`
-    - Using Docker + make: `maker unit-test-single-local-docker TEST_TARGET=<test-suite-name>`
-- If your feature can be unit tested, add one or more unit tests. For more information see our documentation on [Unit Tests](test).
-
 ## Contributors
 
 Marlin is constantly improving thanks to a huge number of contributors from all over the world bringing their specialties and talents. Huge thanks are due to [all the contributors](//github.com/MarlinFirmware/Marlin/graphs/contributors) who regularly patch up bugs, help direct traffic, and basically keep Marlin from falling apart. Marlin's continued existence would not be possible without them.
 
 Marlin Firmware original logo design by Ahmet Cem TURAN [@ahmetcemturan](//github.com/ahmetcemturan).
-
-## Project Leadership
-
-Name|Role|Link|Donate
-----|----|----|----
-🇺🇸 Scott Lahteine|Project Lead|[[@thinkyhead](//github.com/thinkyhead)]|[💸 Donate](//marlinfw.org/docs/development/contributing.html#donate)
-🇺🇸 Roxanne Neufeld|Admin|[[@Roxy-3D](//github.com/Roxy-3D)]|
-🇺🇸 Keith Bennett|Admin|[[@thisiskeithb](//github.com/thisiskeithb)]|[💸 Donate](//github.com/sponsors/thisiskeithb)
-🇺🇸 Jason Smith|Admin|[[@sjasonsmith](//github.com/sjasonsmith)]|
-🇧🇷 Victor Oliveira|Admin|[[@rhapsodyv](//github.com/rhapsodyv)]|
-🇬🇧 Chris Pepper|Admin|[[@p3p](//github.com/p3p)]|
-🇳🇿 Peter Ellens|Admin|[[@ellensp](//github.com/ellensp)]|[💸 Donate](//ko-fi.com/ellensp)
-🇺🇸 Bob Kuhn|Admin|[[@Bob-the-Kuhn](//github.com/Bob-the-Kuhn)]|
-🇳🇱 Erik van der Zalm|Founder|[[@ErikZalm](//github.com/ErikZalm)]|
-
-## Star History
-
-<a id="starchart" href="https://star-history.com/#MarlinFirmware/Marlin&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MarlinFirmware/Marlin&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MarlinFirmware/Marlin&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MarlinFirmware/Marlin&type=Date" />
-  </picture>
-</a>
 
 ## License
 
